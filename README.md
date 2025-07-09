@@ -1,13 +1,14 @@
 # Plex Backup
 
-This is a simple script that backs up Plex Media Server data to AWS S3,
+This is a simple script that backs up Plex Media Server data to S3-compatible storage,
 following [Plex documentation](https://support.plex.tv/articles/201539237-backing-up-plex-media-server-data/).
 The `Cache` directory is excluded as recommended.
 
 ## Usage
 
 1) Install the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
-1) Configure profile with `aws configure`
+1) Configure profile with `aws configure`,
+if using a non-AWS provider be sure to set the endpoint in your `.aws/config`
 
 ```shell
 sudo ./backup.sh --bucketName BUCKET-NAME --profile aws-profile
