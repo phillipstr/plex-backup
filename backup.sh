@@ -29,6 +29,7 @@ remove_local_backup() {
 }
 
 backupDate=$(date +%Y%m%d-%H%M%S)
+plexDir="/var/lib/plexmediaserver/Library/Application Support/Plex Media Server"
 plex_data_tar
 upload_to_s3
 remove_local_backup
