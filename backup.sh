@@ -21,7 +21,7 @@ plex_data_tar() {
 }
 
 upload_to_s3() {
-    aws s3 cp /tmp/plexMediaServer.tar.gz s3://$BUCKET_NAME/$backupDate/plexMediaServer.tar.gz --storage-class STANDARD_IA --profile $AWS_PROFILE
+    aws s3 cp /tmp/plexMediaServer.tar.gz s3://$BUCKET_NAME/$backupDate/plexMediaServer.tar.gz --profile $AWS_PROFILE
 }
 
 remove_local_backup() {
